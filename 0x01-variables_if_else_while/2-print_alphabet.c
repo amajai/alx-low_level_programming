@@ -13,10 +13,6 @@ int main(void)
 	{
 		putchar(a);
 	}
-	for (a = 65; a <= 90; a++)
-	{
-		putchar(a);
-	}
 	putchar('\n');
 	return (0);
 }
