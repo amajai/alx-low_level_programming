@@ -17,9 +17,9 @@ int main(void)
 	{
 		for (n2 = c; n2 <= 8; n2++)
 		{
-			if (n1 != n2)
+			for (n3 = c + 1; n3 <= 9; n3++)
 			{
-				for (n3 = c + 1; n3 <= 9; n3++)
+				if (n1 != n2 && n2 != n3)
 				{
 					if (n1 != 0 || n2 != 1 || n3 != 2)
 					{
@@ -30,8 +30,8 @@ int main(void)
 					putchar(48 + n2);
 					putchar(48 + n3);
 				}
-
 			}
+
 		}
 		c += 1;
 	}
