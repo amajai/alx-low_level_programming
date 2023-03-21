@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints the alphabet, in lowercase, followed by a new line.
+ * print_alphabet - prints the alphabet, in lowercase, followed by a new line.
  *
  * Return: Always 0.
  */
-int main(void)
+int print_alphabet(void)
 {
-	printf("_putchar\n");
+	write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
 	return (0);
 }
