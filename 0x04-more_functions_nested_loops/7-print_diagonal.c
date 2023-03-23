@@ -31,7 +31,8 @@ void print_diagonal(int n)
 			lim++;
 			j = 0;
 		}
-	} else {
+	} else
+	{
 		_putchar('\n');
 	}
 }
