@@ -3,9 +3,9 @@
 /**
  * main - prints its name.
  * @argc : args counts.
- * @argv : args values in array
+ * @argv : args values in array.
  *
- * Return : Always 0.
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
