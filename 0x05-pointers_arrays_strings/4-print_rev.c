@@ -19,6 +19,7 @@ void print_rev(char *s)
 		}
 		c += 1;
 	}
+	c -= 1;
 	while (c >= 0) /* reverse string */
 	{
 		_putchar(s[c]);
