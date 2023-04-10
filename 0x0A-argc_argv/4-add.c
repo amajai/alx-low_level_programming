@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 /**
  * main - adds positive numbers.
- * @argc : args counts.
- * @argv : args values in array.
+ * @argc : number of arguments.
+ * @argv : argument values in an array.
  *
  * Return: 0 if successful; 1 if there is error.
  */
@@ -17,7 +16,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(*argv[i]))
+		if (atoi(argv[i]) > 0)
 		{
 			sum += atoi(argv[i]);
 		}
