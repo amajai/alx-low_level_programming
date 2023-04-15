@@ -53,7 +53,7 @@ int multiply(char *n1, char *n2)
 	num_arr = malloc(sizeof(*num_arr) * (n1_c + n2_c));
 	if (num_arr == NULL)
 	{
-		return (0);
+		exit(98);
 	}
 	for (i = 0; i < (n1_c + n2_c); i++)
 	{
