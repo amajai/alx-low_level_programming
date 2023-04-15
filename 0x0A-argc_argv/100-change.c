@@ -30,15 +30,15 @@ int main(int argc, char *argv[])
 	int cents[5] = {25, 10, 5, 2, 1};
 	int i, len, money, change_count;
 
-	if (argv[1][0] == '-')
-	{
-		printf("%d\n", 0);
-		return (0);
-	}
 	if (argc < 2 || argc > 2)
 	{
 		printf("Error\n");
 		return (1);
+	}
+	if (argv[1][0] == '-')
+	{
+		printf("%d\n", 0);
+		return (0);
 	}
 	len = _strlen(argv[1]);
 	for (i = 0; i < len; i++)
