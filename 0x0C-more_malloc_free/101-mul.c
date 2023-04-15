@@ -50,13 +50,11 @@ void *multiply(char *n1, char *n2)
 
 	n1_c = _strlen(n1);
 	n2_c = _strlen(n2);
-	if ((n1_c == 1 && n1[0] == '0') || (n2_c == 1 && n2[0] == '0'))
-	{
-		_putchar(0 + '0');
-		_putchar('\n');
-		return (0);
-	}
 	num_arr = malloc(sizeof(*num_arr) * (n1_c + n2_c));
+	if (num_arr == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < (n1_c + n2_c); i++)
 	{
 		num_arr[i] = 0;
@@ -76,7 +74,11 @@ void *multiply(char *n1, char *n2)
 		num_arr[k] = carry;
 		base++;
 	}
-	for (i = k - 1; i >= 0 ; i--)
+	while (num_arr[k] == 0 && k > 0)
+	{
+		k--;
+	}
+	for (i = k; i >= 0 ; i--)
 	{
 		_putchar(num_arr[i] + '0');
 	}
