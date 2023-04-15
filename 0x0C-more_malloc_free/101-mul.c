@@ -41,20 +41,22 @@ int _strlen(char *s)
  * @n1 : first number.
  * @n2 : second number.
  *
- * Return: 1 if successful and NULL if it fail;
+ * Return: 0 if successful and NULL if it fail;
  */
-int multiply(char *n1, char *n2)
+void *multiply(char *n1, char *n2)
 {
 	int i, j, k, base, temp, n1_c, n2_c, carry;
 	int *num_arr;
 
 	n1_c = _strlen(n1);
 	n2_c = _strlen(n2);
-	num_arr = malloc(sizeof(*num_arr) * (n1_c + n2_c));
-	if (num_arr == NULL)
+	if ((n1_c == 1 && n1[0] == '0') || (n2_c == 1 && n2[0] == '0'))
 	{
-		exit(98);
+		_putchar(0 + '0');
+		_putchar('\n');
+		return (0);
 	}
+	num_arr = malloc(sizeof(*num_arr) * (n1_c + n2_c));
 	for (i = 0; i < (n1_c + n2_c); i++)
 	{
 		num_arr[i] = 0;
@@ -74,11 +76,7 @@ int multiply(char *n1, char *n2)
 		num_arr[k] = carry;
 		base++;
 	}
-	while (k >= 0 && num_arr[k] == 0)
-	{
-		k--;
-	}
-	for (i = k; i >= 0 ; i--)
+	for (i = k - 1; i >= 0 ; i--)
 	{
 		_putchar(num_arr[i] + '0');
 	}
