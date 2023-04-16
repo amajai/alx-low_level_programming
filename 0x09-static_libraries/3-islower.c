@@ -8,15 +8,7 @@
  */
 int _islower(int c)
 {
-	int c;
-
-	c = 0;
-
-	while (c < 10)
-	{
-		write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
-		c += 1;
-	}
+	(void)c;
 
 	return (0);
 }
