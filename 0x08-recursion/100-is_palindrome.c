@@ -1,4 +1,20 @@
 #include "main.h"
+
+/**
+ * _strlenr - count number characters in string recursively.
+ * @i : character array index.
+ * @s : string of characters
+ *
+ * Return: length of string value.
+ */
+int _strlenr(int i, char *s)
+{
+	if (s[i] == '\0')
+	{
+		return(1);
+	}
+	return (1 + _strlenr(i+1, s));
+}
 /**
  * palindrome_check - check if the number is a palindrome.
  * @i : character array index.
@@ -29,11 +45,6 @@ int is_palindrome(char *s)
 {
 	int len;
 
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	len++;
+	len = _strlenr(0, s);
 	return (palindrome_check(0, s, len));
 }
