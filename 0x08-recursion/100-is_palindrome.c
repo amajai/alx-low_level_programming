@@ -11,9 +11,9 @@ int _strlenr(int i, char *s)
 {
 	if (s[i] == '\0')
 	{
-		return(1);
+		return (1);
 	}
-	return (1 + _strlenr(i+1, s));
+	return (1 + _strlenr(i + 1, s));
 }
 /**
  * palindrome_check - check if the number is a palindrome.
