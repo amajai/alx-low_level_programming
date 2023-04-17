@@ -47,7 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		new_dog_mem->name[i] = name[i];
 	}
 
-	owner_len = _strlen(owner) + 1 + 1;
+	owner_len = _strlen(owner) + 1;
 	new_dog_mem->owner = malloc(sizeof(char) * owner_len);
 	if (new_dog_mem->owner == NULL)
 	{
