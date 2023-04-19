@@ -28,6 +28,8 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	result = get_op(atoi(argv[1]), atoi(argv[3]));
+	if (result == NULL)
+		return (NULL);
 	printf("%d\n", result);
 	return (0);
 }
