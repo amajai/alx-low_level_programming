@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
+#include <ctype.h>
 /**
  * main - program that performs simple operations.
  * @argc: number of arguments
@@ -27,9 +28,9 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
+	if (!isdigit(*argv[1]) || !isdigit(*argv[3]))
+		return (1);
 	result = get_op(atoi(argv[1]), atoi(argv[3]));
-	if (result == NULL)
-		return (NULL);
 	printf("%d\n", result);
 	return (0);
 }
