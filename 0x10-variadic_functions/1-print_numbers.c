@@ -7,8 +7,7 @@
  * @separator: the string to be printed between numbers.
  * @n: number of integers passed to the function.
  *
- * Return: prints string of number separated by a separator string.
- * if separator, NULL is returned.
+ * Return: nothing.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -16,6 +15,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i, curr_num;
 
 	if (separator == NULL)
+	{
+		return;
+	}
+	if (n + '0' < '0' || n + '0' > '9')
 	{
 		return;
 	}
