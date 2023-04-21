@@ -13,10 +13,9 @@ void print_all(const char * const format, ...)
 	int i, isChecked;
 	char c;
 	const char *s;
-
 	va_start(types, format);
 	i = 0;
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
 		isChecked = 1;
 		switch (format[i++])
