@@ -13,4 +13,7 @@ void print_all(const char * const format, ...)
 
 	va_start(types, format);
 	va_end(types);
+	if (format)
+		printf("test");
+	printf("\n");
 }
