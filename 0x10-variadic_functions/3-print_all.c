@@ -13,6 +13,7 @@ void print_all(const char * const format, ...)
 	int i, isChecked;
 	char c;
 	const char *s;
+
 	va_start(types, format);
 	i = 0;
 	while (format[i] != '\0' && format != NULL)
@@ -42,6 +43,6 @@ void print_all(const char * const format, ...)
 		if (format[i] != '\0' && isChecked)
 			printf(", ");
 	}
-	va_end(types);
 	printf("\n");
+	va_end(types);
 }
