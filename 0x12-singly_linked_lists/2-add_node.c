@@ -31,10 +31,8 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new;
 	int len;
 
-	if (str == NULL)
+	if (str == NULL || dup_str == NULL)
 	{
-		dup_str = "(nil)";
-		len = 0;
 		return (NULL);
 	}
 	else
