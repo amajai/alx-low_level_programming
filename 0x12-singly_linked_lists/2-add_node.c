@@ -33,8 +33,9 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (str == NULL)
 	{
-		dup_str = strdup("(nil)");
+		dup_str = "(nil)";
 		len = 0;
+		return (NULL);
 	}
 	else
 	{
