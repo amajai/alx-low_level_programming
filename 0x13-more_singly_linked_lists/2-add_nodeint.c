@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "lists.h"
-#include <string.h>
 #include <stdlib.h>
 /**
  * add_nodeint - adds a new node at the beginning of a linked list.
