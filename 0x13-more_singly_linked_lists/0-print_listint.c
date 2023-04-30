@@ -14,6 +14,8 @@ size_t print_listint(const listint_t *h)
 
 	while (curr_node != NULL)
 	{
+		_putchar(curr_node->n + '0');
+		_putchar('\n');
 		i++;
 		curr_node = curr_node->next;
 	}
