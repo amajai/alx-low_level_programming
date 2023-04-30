@@ -16,8 +16,10 @@ size_t print_listint(const listint_t *h)
 	{
 		_putchar(curr_node->n + '0');
 		_putchar('\n');
+		printf("");
 		i++;
 		curr_node = curr_node->next;
 	}
 	return (i);
 }
+
