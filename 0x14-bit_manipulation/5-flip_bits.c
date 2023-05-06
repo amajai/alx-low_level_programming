@@ -2,8 +2,8 @@
 /**
  * flip_bits - returns the number of bits you would need to flip to get from
  * one number to another.
- * @n: integer base 10 to get index of.
- * @index: index to get for the bit.
+ * @n: first integer.
+ * @m: second integer.
  *
  * Return: 1, if new set value;
  * -1 if error.
