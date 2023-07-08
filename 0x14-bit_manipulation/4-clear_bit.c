@@ -17,7 +17,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	bit_to_remove = ~(1 << index);
 
-	*n = *n & bit_remover;
+	*n = *n & bit_to_remove;
 
 	return (1);
 }
