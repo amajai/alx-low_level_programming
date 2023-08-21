@@ -1,4 +1,4 @@
-#include "Python.h"
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -40,15 +40,10 @@ int mul(int a, int b)
  * @b: second integer.
  *
  * Return: value calculated.
- * if b is 0, return status 100
+ * if b is 0
  */
 int div(int a, int b)
 {
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	return (a / b);
 }
 /**
@@ -57,14 +52,8 @@ int div(int a, int b)
  * @b: second integer.
  *
  * Return: value calculated.
- * if b is 0, return status 100;
  */
 int mod(int a, int b)
 {
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	return (a % b);
 }
