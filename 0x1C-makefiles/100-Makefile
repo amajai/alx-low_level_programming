@@ -10,8 +10,11 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
-%.o : %.c
-	${CC} ${CFLAGS}    -c -o $@ $< 
+main.o: main.c m.h
+	${CC} ${CFLAGS} -c -o $@ $<
+
+school.o: school.c m.h
+	${CC} ${CFLAGS} -c -o $@ $<
 
 clean:
 	${RM} *~ ${NAME}
