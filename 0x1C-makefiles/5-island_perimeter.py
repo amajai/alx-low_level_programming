@@ -12,13 +12,32 @@ def island_perimeter(grid):
     for y in range(len(grid)):
         for x in range(len(grid[y])):
             if grid[y][x] == 1:
-                if y - 1 >= 0 and grid[y-1][x] == 0:
+                # check up
+                if y == 0:
                     perimeter += 1
-                if x + 1 < len(grid[y]) and grid[y][x+1] == 0:
+                else:
+                    if y - 1 >= 0 and grid[y-1][x] == 0:
+                        perimeter += 1
+
+                # Check right
+                if x + 1 == len(grid[y]):
                     perimeter += 1
-                if x - 1 >= 0 and grid[y][x-1] == 0:
+                else:
+                    if x + 1 < len(grid[y]) and grid[y][x+1] == 0:
+                        perimeter += 1
+
+                # Check left
+                if x == 0:
                     perimeter += 1
-            else:
-                if y - 1 >= 0 and grid[y-1][x] == 1:
+                else:
+                    if x - 1 >= 0 and grid[y][x-1] == 0:
+                        perimeter += 1
+
+                # Check down
+                if y + 1 == len(grid):
                     perimeter += 1
+                else:
+                    if y + 1 <= len(grid) and grid[y+1][x] == 0:
+                        perimeter += 1
+
     return perimeter
