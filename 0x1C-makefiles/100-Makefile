@@ -7,8 +7,8 @@ NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: ${OBJ}
-	${CC} ${OBJ} -o ${NAME}
+all: main.o school.o
+	${CC} main.o school.o -o ${NAME}
 
 main.o: main.c m.h
 	${CC} ${CFLAGS} -c -o $@ $<
@@ -20,7 +20,7 @@ clean:
 	${RM} *~ ${NAME}
 
 oclean:
-	${RM} ${OBJ}
+	${RM} main.o school.o
 
 fclean: clean oclean
 
