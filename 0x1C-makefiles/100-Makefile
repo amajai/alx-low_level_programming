@@ -10,10 +10,10 @@ all: main.o school.o
 	$(CC) -o $@ $^
 
 main.o: main.c m.h
-	$(CC) $(CFLAGS)    -c -o $@ $< 
+	$(CC) $(CFLAGS) -c -o $@ $< 
 
 school.o: school.c m.h
-	$(CC) $(CFLAGS)    -c -o $@ $< 
+	$(CC) $(CFLAGS) -c -o $@ $< 
 
 clean:
 	$(RM) *~ $(NAME)
